@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MatAngular"
+    }
+  },
+  "defaultProject": "MatAngular",
+  "cli": {
+    "analytics": "1f2186fd-68a0-4860-9d79-aac5a412895b"
+  }
 }

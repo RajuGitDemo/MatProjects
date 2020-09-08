@@ -1,0 +1,18 @@
+<div class="example-container">
+  <form [formGroup]="employeeForm" (ngSubmit)="OnSubmit()">
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" class="example-right-align">
+        <app-control-messages [control]="employeeForm.get('email')"></app-control-messages> 
+      </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+      <app-control-messages [control]="employeeForm.get('password')"></app-control-messages> 
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-button type ="submit" [disabled]="!employeeForm.valid">Login</button>
+  </form>
+  </div>

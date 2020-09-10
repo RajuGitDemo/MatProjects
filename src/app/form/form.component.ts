@@ -18,7 +18,8 @@ visibility_off:boolean=true;
   ngOnInit(): void {
     this.employeeForm=this.fb.group({
       email:['',[Validators.required, ValidationService.emailValidator]],
-      password:['',[Validators.required,ValidationService.passwordValidator]]  
+      password:['',[Validators.required,ValidationService.passwordValidator]],
+      ipadd:['',[Validators.required,ValidationService.ValidateIPaddress]]    
     });
   }
   OnSubmit(){ 

@@ -13,6 +13,12 @@
       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
     </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>IP Address</mat-label>
+      <input matInput type="text" formControlName="ipadd" class="example-right-align">
+      <app-control-messages [control]="employeeForm.get('ipadd')"></app-control-messages> 
+    </mat-form-field>
+
     <button mat-button type ="submit" [disabled]="!employeeForm.valid">Login</button>
   </form>
   </div>
